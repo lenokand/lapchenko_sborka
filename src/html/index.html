@@ -2,52 +2,1294 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="stylesheet" href="bundle.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png"> -->
+  <!-- <link rel="manifest" href="icons/site.webmanifest"> -->
+  <!-- <link rel="stylesheet" href="bundle.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/css/uikit.min.css" as="style"
+    onload="this.rel='stylesheet'" media="all">
+  <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/css/components/tooltip.almost-flat.min.css" rel="stylesheet"> -->
+  <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/css/components/tooltip.almost-flat.min.css"
+    as="style" onload="this.rel='stylesheet'" media="all">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/css/components/slidenav.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/css/components/slideshow.min.css" rel="stylesheet">
+  <link href="https://lapchenko.clinic/assets/style/style.css?random=87365835" rel="stylesheet">
 </head>
 
-<body class="bg-light">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary header shadow-sm">
-        <div class="container">
-            <a class="h2 text-decoration-none text-white" href="#">eStore</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-pills mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/" data-route>Home</a>
+
+  <header>
+   
+
+    <!-- Navigation -->
+    <nav class="uk-navbar uk-navbar-attached">
+      <a class="uk-icon-button uk-icon-navicon uk-visible-small" href="#mobnav" data-uk-offcanvas
+        style="margin:8px;position:fixed;z-index:2"></a>
+      <div class="uk-container-center" style="max-width: 1200px">
+        <a class="uk-navbar-brand uk-hidden-small" href="/"><bdo>
+            <p class="wow">Стоматологическая клиника доктора Лапченко</p>
+          </bdo></a>
+
+        <!-- Main menu for PC -->
+        <ul class="uk-navbar-nav uk-hidden-small">
+          <li><a href="/ru/about-us/">О нас</a></li>
+          <li><a href="/ru/dentists/">Наша команда</a></li>
+          <li class="uk-parent" data-uk-dropdown><a href="/ru/dental-services/">Услуги</a>
+
+            <div class="uk-dropdown uk-dropdown-small uk-dropdown-navbar">
+              <ul class="uk-nav uk-nav-navbar uk-nav-parent-icon" data-uk-nav>
+                <li><a href="/ru/dental-services/">Наши услуги</a></li>
+                <li class="uk-parent"><a href="#">Диагностика</a>
+                  <ul class="uk-nav-sub">
+                    <li><a href="/ru/dental-services/diagnostics/">Диагностика</a></li>
+                    <li><a href="/ru/dental-services/ortopantomogramma/">Ортопантомограмма</a></li>
+                    <li><a href="/ru/dental-services/digital-smile-design/">Компьютерное моделирование улыбки</a></li>
+                  </ul>
+                </li>
+                <li class="uk-parent"><a href="#">Терапия</a>
+                  <ul class="uk-nav-sub">
+                    <li><a href="/ru/dental-services/general-dentistry/">Терапевтическая стоматология</a></li>
+                    <li><a href="/ru/dental-services/lechenie-kariesa/">Лечение кариеса</a></li>
+                    <li><a href="/ru/dental-services/vosstanovlenie-razrushenih-zubov/">Реставрация зубов</a></li>
+                  </ul>
+                </li>
+                <li class="uk-parent"><a href="#">Профилактика</a>
+                  <ul class="uk-nav-sub">
+                    <li><a href="/ru/dental-services/prophylaxis-dentistry/">Профилактика</a></li>
+                    <li><a href="/ru/dental-services/ftorirovanie-zubov/">Фторирование зубов</a></li>
+                    <li><a href="/ru/dental-services/teeth-whitening/">Отбеливание зубов</a></li>
+                    <li><a href="/ru/dental-services/ultrazvulovaja-chistka-zubov/">Ультразвуковая чистка зубов</a></li>
+                    <li><a href="/ru/dental-services/chistka-zubov-air-flow/">Чистка зубов Air Flow</a></li>
+                  </ul>
+                </li>
+                <li class="uk-parent"><a href="#">Пародонтология</a>
+                  <ul class="uk-nav-sub">
+                    <li><a href="/ru/dental-services/gum-disease-treatment/">Пародонтология</a></li>
+                    <li><a href="/ru/dental-services/lechenie-gingivita/">Лечение гингивита</a></li>
+                    <li><a href="/ru/dental-services/lechenie-parodontita/">Лечение пародонтита</a></li>
+                    <li><a href="/ru/dental-services/lechenie-parodontoza/">Лечение пародонтоза</a></li>
+                    <li><a href="/ru/dental-services/vektor-terapija/">Вектор-терапия</a></li>
+                  </ul>
+                </li>
+                <li class="uk-parent"><a href="#">Хирургия</a>
+                  <ul class="uk-nav-sub">
+                    <li><a href="/ru/dental-services/oral-maxilofacial-surgery/">Хирургия</a></li>
+                    <li><a href="/ru/dental-services/wisdom-tooth-extraction/">Удаление зубов мудрости</a></li>
+                    <li><a href="/ru/dental-services/implantacia-zubov/">Имплантация зубов</a></li>
+                    <li><a href="/ru/dental-services/sinus-lifting/">Синус лифтинг</a></li>
+                    <li><a href="/ru/dental-services/3d-kostnaja-plastika/">3D костная пластика</a></li>
+                  </ul>
+                </li>
+                <li class="uk-parent"><a href="#">Ортодонтия</a>
+                  <ul class="uk-nav-sub">
+                    <li><a href="/ru/dental-services/orthodontics/">Ортодонтия</a></li>
+                    <li><a href="/ru/dental-services/ispravlenie-prikusa-bez-breketov/">Исправление прикуса без
+                        брекетов</a></li>
+                    <li><a href="/ru/dental-services/elaineri/">Лечение каппами Invisalign и Easy Align</a></li>
+                  </ul>
+                </li>
+                <li class="uk-parent"><a href="#">Протезирование</a>
+                  <ul class="uk-nav-sub">
+                    <li><a href="/ru/dental-services/prosthodontics/">Ортопедия</a></li>
+                    <li><a href="/ru/dental-services/protezirovanie-zubov/">Протезирование зубов</a></li>
+                    <li><a href="/ru/dental-services/koronki-na-zub/">Коронки</a></li>
+                    <li><a href="/ru/dental-services/zubnoj-most/">Мостовидные протезы</a></li>
+                    <li><a href="/ru/dental-services/dental-veneers/">Виниры</a></li>
+                    <li><a href="/ru/dental-services/metallokeramika/">Металлокерамика</a></li>
+                    <li><a href="/ru/dental-services/bezmetallovaya-keramika/">Безметалловые коронки и вкладки</a></li>
+                    <ul>
+                      <li><a href="/ru/dental-services/keramicheskie-koronki/">Керамические</a></li>
+                      <li><a href="/ru/dental-services/oksid-cirkoniya/">Оксид циркония</a></li>
+                    </ul>
+                    <li><a href="/ru/dental-services/protezirovanie-na-implantah/">Протезирование на имплантатах</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cart" data-route>Cart</a>
-                    </li>
-                </ul>
-                <div class="dropdown ms-lg-5 cart-informer" id="cart-informer">
-                    <a class="btn btn-secondary dropdown-toggle btn-lg" href="#" role="button" id="dropdownMenuLink"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-cart"></i>
-                        <span class="badge bg-primary rounded-pill"></span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark bg-secondary" aria-labelledby="dropdownMenuLink"></ul>
-                </div>
+                  </ul>
+                </li>
+                <li><a href="/ru/dental-services/pediatric-dentistry/">Детская стоматология</a></li>
+                <li><a href="/ru/dental-services/emergency-treatment/">Неотложная помощь</a></li>
+                <!--<li class="uk-nav-divider"></li>
+                  <li> <a href="/ru/prices.pdf">Стоимость лечения зубов</a></li>-->
+              </ul>
             </div>
+          </li>
+          <li class="uk-parent" data-uk-dropdown><a href="/ru/new-patient/">Новому пациенту</a>
+            <div class="uk-dropdown uk-dropdown-small uk-dropdown-navbar">
+              <ul class="uk-nav uk-nav-navbar">
+                <li><a href="/ru/new-patient/">Ваш первый визит к нам</a></li>
+                <li><a href="/ru/new-patient/#regular_visits">Регулярные посещения</a></li>
+                <li><a href="/ru/faq/">F.A.Q.</a></li>
+                <li><a href="/ru/contact-us/">Выбрать время для визита</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="/blog/">Блог</a></li>
+          <li class="uk-parent" data-uk-dropdown>
+            <a href="/ru/contact-us/">Контакты</a>
+            <div class="uk-dropdown uk-dropdown-small uk-dropdown-navbar">
+              <ul class="uk-nav uk-nav-navbar">
+                <li><a href="/ru/contact-us/">Контакты</a></li>
+                <li
+                  data-modalform-text='{"caption":"Укажите Ваше имя, телефон и адрес электронной почты, что бы мы могли с Вами связаться:","submit":"Отправить","cancel":"Отмена","thanks":"Спасибо. Ваше сообщение было отправлено."}'>
+                  <a href="#" data-modalform='{"type":"questions","help":"Опишите подробно Ваш вопрос:"}'>Задать
+                    вопрос</a>
+                  <a href="#" data-modalform='{"type":"callback","help":"Укажите Ваше имя:"}'>Перезвоните мне</a>
+                  <a href="#"
+                    data-modalform='{"type":"complaints","help":"Я сожалею, что Вы остались недовольны. Пожалуйста расскажите мне об этом подробно:","img":"/photos/dentists/chief.jpg"}'>Есть
+                    жалобы?</a>
+                </li>
+                <li><a href="//www.facebook.com/lapchenkoclinic/reviews" target="_blank">Оставить отзыв</a></li>
+                <li><a href="/ru/license/">Лицензия</a></li>
+                <li class="uk-hidden-xlarge"><a href="/ru/careers/">Карьера</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="uk-visible-xlarge"><a href="/ru/careers/">Карьера</a></li>
+        </ul>
+        <ul class="lang_change desktop_lang">
+          <script type="text/javascript">
+            let origin = window.location.origin; //$(location).attr('origin');
+            let pathname = window.location.pathname; //$(location).attr('pathname');
+            if (pathname.search("/ru/") != -1 || pathname == "/") {
+              if (pathname == "/") {
+                temp = pathname.replace("/", "/ua/");
+              } else {
+                temp = pathname.replace("/ru/", "/ua/");
+              }
+              document.write('<li><a class="active_lang" href="' + origin + pathname + '">RU</a></li>')
+              document.write('<li>|</li>');
+              document.write('<li><a href="' + origin + temp + '" >UA</a></li>');
+            } else {
+              let temp = pathname.replace("/ua/", "/ru/");
+              document.write('<li><a href="' + origin + temp + '">RU</a></li>')
+              document.write('<li>|</li>');
+              document.write('<li><a class="active_lang" href="' + origin + pathname + '" >UA</a></li>');
+            }
+          </script>
+        </ul>
+        <div class="header__contacts">
+          <div class="header__phone"><a href="tel:380675232181"
+              onclick="ga('send','event','button','call'); ym('71324331', 'reachGoal', 'phone_click'); return true;">+38(067)523-21-81</a>
+          </div>
+          <div class="header__phone"><a href="tel:380992597081"
+              onclick="ga('send','event','button','call'); ym('71324331', 'reachGoal', 'phone_click'); return true;">+38(099)259-70-81</a>
+          </div>
         </div>
-    </nav>
+        <div class="uk-navbar-flip">
+          <div class="uk-button-group">
+            <a class="uk-icon-button link-fbook" href="//www.facebook.com/lapchenkoclinic" target="_blank"
+              data-uk-tooltip="{pos:'bottom',offset:10,delay:550}" title="страница на Facebook"
+              onclick="ym('71324331', 'reachGoal', 'facebook_click'); return true;"><bdo>Facebook</bdo></a>
+            <!-- <div data-uk-dropdown="{mode:'hover'}">
+                <a class="uk-icon-button link-globe" href="javascript:;"><bdo>Язык:</bdo></a>
+                <div class="uk-dropdown uk-dropdown-small">
+                  <ul class="uk-nav uk-nav-dropdown">
+                    <li> <a href="/en">English</a> </li>
+                    <li><a href="/ru">Русский</a></li>
+                    <li><a href="/ua">Солов'їна</a></li>
+                  </ul>
+                </div>
+              </div> -->
+            <!--  -->
+            <!--  -->
+          </div>
+        </div>
 
-    <div class="container bg-white shadow-sm my-3 py-3 rounded">
-        <div class="row g-3" id="route-view"></div>
+        <a class="uk-navbar-brand uk-visible-small" href="/"></a>
+      </div>
+      <!-- Mobile navigation -->
+      <div id="mobnav" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+          <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+            <li><a href="/">Домашняя страница</a></li>
+            <li><a href="/ru/about-us/">О нас</a></li>
+            <li><a href="/ru/dentists/">Наша команда</a></li>
+            <li><a href="/ru/dental-services/">Наши Услуги</a></li>
+            <!-- <li> <a href="/ru/prices.pdf">Стоимость лечения (PDF)</a> </li> -->
+            <li><a href="/ru/new-patient/">Новому пациенту</a></li>
+            <li class="uk-parent">
+              <a href="#">Контакты</a>
+              <ul class="uk-nav-sub">
+                <li><a href="/ru/contact-us/">Контакты</a></li>
+                <li
+                  data-modalform-text='{"caption":"Укажите Ваше имя, телефон и адрес электронной почты, что бы мы могли с Вами связаться:","submit":"Отправить","cancel":"Отмена","thanks":"Спасибо. Ваше сообщение было отправлено."}'>
+                  <a href="#" data-modalform='{"type":"questions","help":"Опишите подробно Ваш вопрос:"}'>Задать
+                    вопрос</a>
+                  <a href="#" data-modalform='{"type":"callback","help":"Укажите Ваше имя:"}'>Перезвоните мне</a>
+                  <a href="#"
+                    data-modalform='{"type":"complaints","help":"Я сожалею, что Вы остались недовольны. Пожалуйста расскажите мне об этом подробно:","img":"/photos/dentists/chief.jpg"}'>Есть
+                    жалобы?</a>
+                </li>
+                <li><a href="//www.facebook.com/lapchenkoclinic/reviews" target="_blank">Оставить отзыв</a></li>
+              </ul>
+            </li>
+            <li><a href="/ru/careers/">Карьера</a></li>
+            <li><a href="//www.facebook.com/lapchenkoclinic">Наш Facebook</a></li>
+            <li class="uk-nav-header"><i class="uk-icon-globe"></i>Language (Язык/Мова)</li>
+            <!-- <li> <a href="/en">English</a> </li> -->
+            <!-- <li><a href="/ru">Русский</a></li>
+              <li><a href="/ua">Солов'їна</a></li> -->
+          </ul>
+          <!-- <ul class="lang_change mobile_lang">
+              <li><a href="/ru/" style="color:white;">RU</a></li>
+              <li>|</li>
+              <li><a href="/ua/" style="color:white;">UA</a></li>
+            </ul> -->
+          <ul class="lang_change mobile_lang">
+            <script type="text/javascript">
+              origin = window.location.origin; //$(location).attr('origin');
+              pathname = window.location.pathname; //$(location).attr('pathname');
+              if (pathname.search("/ru/") != -1) {
+                let temp = pathname.replace("/ru/", "/ua/");
+                document.write('<li><a class="active_lang" href="' + origin + pathname + '">RU</a></li>')
+                document.write('<li>|</li>');
+                document.write('<li><a href="' + origin + temp + '" >UA</a></li>');
+              } else {
+                let temp = pathname.replace("/ua/", "/ru/");
+                document.write('<li><a href="' + origin + temp + '">RU</a></li>')
+                document.write('<li>|</li>');
+                document.write('<li><a class="active_lang" href="' + origin + pathname + '" >UA</a></li>');
+              }
+            </script>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="banner" class="uk-hidden-small" style="background: url('products/baner2.png') center / cover;;">
+      <div>
+        <!--<a class="uk-button uk-button-large uk-button-primary uk-hidden-notouch call" href="tel:+380675232181">Позвони нам<br><big>+38(067)523-21-81</big></a>-->
+        <div class="uk-margin-large" style="margin:0 -18px"
+          data-modalformnew-text='{"caption":" ","submit":"отправить заявку","cancel":" ","thanks":"Спасибо! Ваше сообщение было отправлено. Мы свяжемся с Вам в кратчайшие сроки!"}'>
+          <a class="uk-button uk-button-large uk-button-primary button-primary_serveces call" href="tel:+380675232181"
+            onclick="ga('send','event','button','zvonok'); ym('71324331', 'reachGoal', 'button_zvonok'); return true;">позвоните
+            нам</a>
+          <a class="uk-button uk-button-large uk-button-primary button-primary_serveces bg-blue sign" href="#"
+            data-modalformnew='{"type":"request","help":" "}'>записаться на прием </a>
+        </div>
+
+
+        <!-- <div class="uk-margin-large" style="margin:0 -18px"
+          data-modalform-text='{"caption":"Укажите Ваш телефон:","submit":"Отправить","cancel":"Отмена","thanks":"Спасибо! Ваше сообщение было отправлено. Мы свяжемся с Вам в кратчайшие сроки!"}'>
+          <a class="uk-button uk-button-large uk-button-primary button-primary_serveces call" href="tel:+380675232181"
+            onclick="ga('send','event','button','zvonok'); ym('71324331', 'reachGoal', 'button_zvonok'); return true;">позвоните
+            нам</a>
+          <a class="uk-button uk-button-large uk-button-primary button-primary_serveces bg-blue sign" href="#"
+            onclick="ga('send','event','button','zapis'); ym('71324331', 'reachGoal', 'button_zapis'); return true;"
+            data-modalform='{"type":"request","help":"Укажите Ваше имя:"}'>записаться на прием </a>
+        </div> -->
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="uk-container uk-container-center uk-margin-large">
+      <article>
+        <ul class="uk-breadcrumb breadcrumb_serv" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="./index">
+              <b itemprop="name">Главная</b></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="./dental-services">
+              <b itemprop="name">Наши услуги</b></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="./dentists/"></a>
+            <span itemprop="name">Детская стоматология</span>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ul>
+        <hgroup>
+          <p class="title_serv">Детская стоматология в Днепре</p>
+
+        </hgroup>
+        <p class="subtitle_serv"><b>С какого возраста</b> можно лечить молочные зубы?</p>
+        <p>
+          Когда ребенок не боится стоматолога – это не везение и не удача. Это результат тщательно спланированных
+          действий мамы и папы. Как только у малыша появились зубки – их нужно начинать чистить. Да, даже если они
+          появились в 4 месяца - специальными безопасными силиконовыми щетками. Далее по мере роста малыша и
+          прорезывания у него новых молочных зубов – силиконовые щетки заменяются классическими. Кроху можно и нужно
+          приучить к утреннему и вечернему ритуалу чистки зубов.
+        </p>
+        <p>
+          Как только Ваш ребенок готов контактировать с детским зубным врачом (открывать ротик для визуального осмотра и
+          обследовать стоматологический кабинет), независимо от возраста и количества прорезавшихся зубов, – можно
+          впервые отправляться в стоматологию: кататься в кресле, играть и смотреть на зубки в зеркало. В следующий раз
+          эти зубки уже можно будет почистить в кресле щеточкой. Таким образом ребенок на комфортных манипуляциях
+          привыкает к стоматологическому кабинету и допускает возможность проведения каких-то процедур другим взрослым у
+          себя во рту.
+        </p>
+        <p>
+
+          Приходите к нам, и мы научим ваших деток чистить зубы правильно, а вас - как проверить результат!
+        </p>
+
+      </article>
+      <div class="serv_price">
+        <div class="subtitle_serv">
+          <b> Цены на лечение </b> молочных зубов
+        </div>
+
+
+        <div class="wrapper">
+          <div class="left-part">
+            <img src="products/price.png" alt="">
+          </div>
+          <div class="right-part">
+            <table class="uk-table uk-table-hover uk-table-small service_table">
+
+              <thead>
+                <tr>
+                  <th>Услуга</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tr itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <td itemprop="name"><b>Веселый прием</b> - психологическая адаптация ребенка</td>
+                <td class="price_value">от <span itemprop="price">4600</span> грн
+                  <meta itemprop="priceCurrency" content="UAH">
+                </td>
+              </tr>
+              <tr itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <td itemprop="name"><b> Веселые пломбы </b>- пломбировка цветными фотополимерными материалами</td>
+                <td class="price_value">от <span itemprop="price">11400</span> грн
+                  <meta itemprop="priceCurrency" content="UAH">
+                </td>
+              </tr>
+              <tr itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <td itemprop="name"><b>Лечение каналов молочных зубов</b></td>
+                <td class="price_value">от <span itemprop="price">12250</span> грн
+                  <meta itemprop="priceCurrency" content="UAH">
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+      <div class="serv_schedule">
+        <div class="subtitle_serv"><b> Время работы клиники</b></div>
+        <div class="schedule_cards">
+          <div class="schedule_card">
+            <img src="products/clock.svg" alt="">
+            <div class="card_info">
+              <div class="top">По бдуням
+              </div>
+              <div class="bottom">
+                09:00 - 20:00
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule_card">
+            <img src="products/clock.svg" alt="">
+            <div class="card_info">
+              <div class="top">Суббота
+
+              </div>
+              <div class="bottom">
+                10:00 - 18:00
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule_card">
+            <img src="products/clock.svg" alt="">
+            <div class="card_info">
+              <div class="top">Воскресенье
+
+              </div>
+              <div class="bottom">
+                выходной
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uk-margin-large" style="margin:0 -18px"
+          data-modalformnew-text='{"caption":" ","submit":"отправить заявку","cancel":" ","thanks":"Спасибо! Ваше сообщение было отправлено. Мы свяжемся с Вам в кратчайшие сроки!"}'>
+
+          <a class="uk-button uk-button-large uk-button-primary button-primary_serveces  call" href="#"
+            data-modalformnew='{"type":"request","help":" "}'>записаться на прием </a>
+        </div>
+
+        <!-- <a class="uk-button uk-button-large uk-button-primary button-primary_serveces  call" href="#"
+          onclick="ga('send','event','button','zapis'); ym('71324331', 'reachGoal', 'button_zapis'); return true;"
+          data-modalform='{"type":"request","help":"Укажите Ваше имя:"}'>записаться на прием </a> -->
+        <div class="social_fb">
+          <a href="https://www.facebook.com/lapchenkoclinic/">
+            <img src=" products/fb.png" alt="">
+            Клиника доктора Лапченко
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="serv-slider_doctors  uk-block-secondary">
+      <div class="slider-title">
+        Наши врачи
+      </div>
+
+      <div class="swiper slider-serveces uk-container uk-container-center">
+        <div class=" swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="avatar">
+              <img src=" products/avatar1.png" alt="">
+
+            </div>
+            <div class="name">
+              <b> Крижановская</b> <br>
+              Мария Григориевна
+            </div>
+            <div class="position">
+              детский стоматолог
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="avatar">
+              <img src=" products/avatar1.png" alt="">
+
+            </div>
+            <div class="name">
+              <b> Крижановская</b> <br>
+              Мария Григориевна
+            </div>
+            <div class="position">
+              детский стоматолог
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="avatar">
+              <img src=" products/avatar1.png" alt="">
+
+            </div>
+            <div class="name">
+              <b> Крижановская</b> <br>
+              Мария Григориевна
+            </div>
+            <div class="position">
+              детский стоматолог
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="avatar">
+              <img src=" products/avatar1.png" alt="">
+
+            </div>
+            <div class="name">
+              <b> Крижановская</b> <br>
+              Мария Григориевна
+            </div>
+            <div class="position">
+              детский стоматолог
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="avatar">
+              <img src=" products/avatar1.png" alt="">
+
+            </div>
+            <div class="name">
+              <b> Крижановская</b> <br>
+              Мария Григориевна
+            </div>
+            <div class="position">
+              детский стоматолог
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="avatar">
+              <img src=" products/avatar1.png" alt="">
+
+            </div>
+            <div class="name">
+              <b> Крижановская</b> <br>
+              Мария Григориевна
+            </div>
+            <div class="position">
+              детский стоматолог
+            </div>
+
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="slider-button-prev">
+          <img src=" products/arrowleft.png" alt="">
+        </div>
+        <div class="slider-button-next">
+          <img src=" products/arrowright.png" alt="">
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="uk-container uk-container-center uk-margin-large serv_seo-text">
+      <div class="subtitle_serv">
+        Лечение постоянных и молочных зубов
+      </div>
+      <p>
+        Найти лучшую стоматологическую клинику в Днепре для многих является многолетним вопросом выбора… Не секрет, что
+        посещение стоматолога до сих пор остается одной из самых распространенных фобий не только для детей, но и их
+        родителей. Посещение стоматолога со своим ребенком и вовсе может вывести из равновесия даже самую стойкую маму.
+        Чтобы не пришлось тащить волоком своё чадо к врачу, держать во время приема и обещать золотые горы за пролитые
+        слезы, посещать стоматолога нужно начинать значительно раньше, чем возникнут проблемы.
+      </p>
+      <p>
+        Если вашему малышу предстоит визит к стоматологу, ни в коем случае не говорите ему фразы “это не больно” или
+        “это не страшно”, потому что на деле эти фразы имеют исключительно обратный характер. Таким образом вы его
+        напугаете. Не акцентируйте важность предстоящего события, все должно выглядеть повседневно и буднично. Ведь
+        согласитесь, когда Вы ведете ребенка скажем в кафе, Вы же не говорите «просто зайдем», «там не будет невкусно»,
+        «а за это я тебя свожу в магазин игрушек». Ребенок моментально чувствует подвох и вместо того чтобы облегчить –
+        Вы усложняете работу врачу.
+      </p>
+      <p>
+        Если малышу требуется лечение, то долгая отсрочка может привести к серьезным последствиям. Кариес у ребенка
+        развивается остро и очень быстро перерастает в пульпит. Данные наших наблюдений показывают, что у детей, не
+        посещавших стоматолога, к пятилетнему возрасту от 4 до 6 зубов нуждаются в лечении. Причиной тому служит
+        отсутствие необходимой информации у родителей об особенностях стоматологии детского возраста. Перед первым
+        посещением позвоните и обговорите с детским стоматологом особенности поведения вашего ребенка, чтобы первый
+        прием прошел с учетом поведенческих привычек.
+      </p>
+      <p>
+        В идеале, первый визит в стоматологический кабинет должен носить ознакомительный характер. Это поможет избавить
+        ребенка от боязни стоматологов. А родители получат информацию о правильном уходе за зубами своего ребенка.
+      </p>
+    </div>
+    <div class="uk-block-secondary services_page">
+      <div class="subtitle_serv">
+        <b> Наши услуги</b> детского стоматолога
+      </div>
+      <div class="services_page_cards uk-container uk-container-center">
+        <div class="serv_card">
+          <div class="image_card" style="background-image: url(' products/serv1.png') ;">
+            Профилактика и <br>
+            гигиена
+          </div>
+          <a class="serv_card-link" href="#">подробнее</a>
+        </div>
+
+        <div class="serv_card">
+          <div class="image_card" style="background-image: url(' products/serv1.png') ;">
+            Психологическая<br>
+            адаптация
+          </div>
+          <a class="serv_card-link" href="#">подробнее</a>
+        </div>
+
+        <div class="serv_card">
+          <div class="image_card" style="background-image: url(' products/serv1.png') ;">
+            Психологическая<br>
+            адаптация
+          </div>
+          <a class="serv_card-link" href="#">подробнее</a>
+        </div>
+
+        <div class="serv_card">
+          <div class="image_card" style="background-image: url(' products/serv1.png') ;">
+            Психологическая<br>
+            адаптация
+          </div>
+          <a class="serv_card-link" href="#">подробнее</a>
+        </div>
+      </div>
+    </div>
+    <div class="uk-container uk-container-center uk-margin-large serv_seo-block">
+      <div class="subtitle_serv"> Причины выбрать <b> клинику Лапченко</b></div>
+      <p>Главная задача детской стоматологии – профилактика. Врач старается предотвратить появление кариеса и других
+        заболеваний полости рта. Для этого ребенка, пришедшего в клинику, обследуют, выявляют потенциальные причины
+        возникновения кариеса, определяют программу профилактики и индивидуальную периодичность посещения
+        врача-стоматолога. Стоматологические заболевания у детей протекают иначе, чем у взрослых: детский стоматолог
+        учитывает взаимосвязь с общими заболеваниями, процессами роста и развития ребенка.</p>
+      <ul>
+
+        <li>
+          На приеме врач-стоматолог обязательно покажет ребенку, как правильно ухаживать за полостью рта, и объяснит
+          родителям, какую щетку и хорошую пасту выбрать. Стоматолог также проконтролирует образование микробного налета
+          и устранит его в случае необходимости, поскольку именно микробный налет является причиной развития кариеса и
+          заболеваний десен – гингивита.
+
+        </li>
+        <li>
+          Отличаются и материалы, используемые в детской стоматологии. В нашей поликлинике для лечения кариеса и его
+          осложнений у детей разного возраста применяются специальные пломбировочные материалы. Они отличаются
+          повышенной прочностью и лечебным эффектом в отношении твердых тканей зубов.
+
+        </li>
+        <li>
+          Даже если у ребенка нет кариеса, его молочные и постоянные зубы, в силу недостаточной зрелости твердых тканей,
+          нуждаются в активных профессиональных профилактических мероприятиях. К подобным процедурам, способствующим
+          формированию и укреплению тканей зубов, относятся аппликации кальций-, фосфор -, фторсодержащих лаков и гелей.
+
+        </li>
+        <li>
+          Важной профилактической мерой является герметизация фиссур (бороздок) жевательных зубов сразу после их
+          прорезывания. Фиссуры заливаются специальным материалом – герметиком, создающим механический барьер и
+          оказывающим укрепляющее действие на ткани зуба за счет содержания ионов фтора. Все эти манипуляции совершенно
+          безболезненны, поэтому ребенок не испытывает дискомфорта во время их проведения, ведет себя естественно и
+          приходит на прием с удовольствием. Важно, что у детей формируется положительный опыт общения со стоматологом,
+          а это создает благоприятный фон для лечения зубов в случае возникновения кариеса.
+
+        </li>
+        <li>
+          Если молочные зубы не лечить, а удалять, то их преждевременная потеря может привести к формированию
+          неправильного прикуса. Потеря зуба нарушит процесс пережевывания пищи, что в дальнейшем может привести к
+          заболеваниям желудочно-кишечного тракта.
+
+        </li>
+        <li>
+          Мы предлагаем полный спектр детских стоматологических услуг. Вам всегда готов помочь не только врач-терапевт,
+          но и хирург и ортодонт.
+
+        </li>
+        <li>И да, если необходимо, мы лечим детей "под наркозом". На самом деле наркоз применяется крайне редко в
+          детской стоматологии. Чаще используется седация. Но перед этим, наши детские стоматологи-профессионалы
+          обязательно попытаются найти подход к вашему чаду (и зачастую у них это получается). Все ньюансы вы можете
+          узнать по телефону у администратора. </li>
+      </ul>
+      <p>Проверено, что в хорошей современной частной клинике детки всегда чувствуют комфортнее, чем в
+        поликлинике советского типа. Мы не лечим дешево, но наши демократические цены вас приятно удивят!
+        Цены на детскую стоматологию преведены выше.
+
+      </p>
+      <p>Телефон, отзывы и наш график работы вы найте на странице <a href="/ru/contact-us/"
+          style="text-decoration: underline;">Контакты</a>
+        <br> Мы находимся на правом берегу Днепра.
+      </p>
+      <div class="social_serv">
+        <div class="uk-margin-large" style="margin:0 -18px"
+          data-modalformnew-text='{"caption":" ","submit":"отправить заявку","cancel":" ","thanks":"Спасибо! Ваше сообщение было отправлено. Мы свяжемся с Вам в кратчайшие сроки!"}'>
+
+          <a class="uk-button uk-button-large uk-button-primary button-primary_serveces  call" href="#"
+            data-modalformnew='{"type":"request","help":" "}'>записаться на прием </a>
+        </div>
+
+
+        <!-- <a class="uk-button uk-button-large uk-button-primary button-primary_serveces  call" href="#"
+          onclick="ga('send','event','button','zapis'); ym('71324331', 'reachGoal', 'button_zapis'); return true;"
+          data-modalform='{"type":"request","help":"Укажите Ваше имя:"}'>записаться на прием </a> -->
+
+        <div class="social_fb">
+          <a href="https://www.facebook.com/lapchenkoclinic/">
+            <img src=" products/fb.png" alt="">
+            Клиника доктора Лапченко
+          </a>
+        </div>
+      </div>
+
+      <div class="serv_galery">
+        <div class="serv_col">
+          <div class="big_img">
+            <img src=" products/galery1.png" alt="">
+          </div>
+          <div class="small_img">
+            <img src=" products/galery2.png" alt="">
+          </div>
+        </div>
+
+        <div class="serv_col">
+
+          <div class="small_img">
+            <img src=" products/galery2.png" alt="">
+          </div>
+          <div class="big_img">
+            <img src=" products/galery1.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uk-container uk-container-center uk-margin-large serv_seo-block">
+      <div class="subtitle_serv">
+
+        Какие материалы для пломб используются <br> <b>
+          в клинике доктора Лапченко?</b>
+
+      </div>
+      <p>Молочные зубки лечить нужно обязательно. Это не менее важно, чем лечение постоянных. Дело в том, что корни
+        молочных моляров находятся далеко друг от друга и захватывают зачатки постоянных зубов. И все, что происходит с
+        молочными зубами малыша, влияет на состояние постоянных.
+
+      </p>
+      <p>Для лечения детей используем материалы таких мировых брендов:</p>
+      <ul>
+        <li>3М (США);
+        </li>
+        <li>Dentsply (США);
+        </li>
+        <li>
+          Ivoclar Vivadent (Лихтенштейн);
+
+        </li>
+        <li>Shofu (Япония)</li>
+      </ul>
+      <div class="serv_firms-cards">
+        <div class="serv_firms-card">
+          <img src=" products/firm1.png" alt="">
+        </div>
+        <div class="serv_firms-card">
+          <img src=" products/firm2.png" alt="">
+        </div>
+        <div class="serv_firms-card">
+          <img src=" products/firm3.png" alt="">
+        </div>
+        <div class="serv_firms-card">
+          <img src=" products/firm4.png" alt="">
+        </div>
+      </div>
+      <p>Зачастую, в силу поведенческих особенностей детей, для лечения молочных зубов используются стеклоиономерные
+        цементы. Их плюсами является:</p>
+      <ul>
+        <li>внесение в полость одной порцией;
+        </li>
+        <li>низкая растворимость;
+        </li>
+        <li>
+          противокариозный эффект за счет выделения фтора;
+
+        </li>
+        <li>
+          высокая адгезия к дентину и эмали зуба;
+
+        </li>
+        <li>
+          кислотоустойчивость.
+        </li>
+      </ul>
+      <p>А также новинка в нашем кабинете - <b> цветные пломбы Twinky Star!</b></p>
+      <ol>
+        <li>
+          «Волшебные» цветные пломбы Twinky Star помогают избавиться от страха перед лечением зубов у детей: золотой,
+          серебряный, голубой, розовый, зеленый, оранжевый, лимонный и «ежевика».
+
+        </li>
+        <li>
+          Ребенок сам выбирает себе цвет пломбы, что вызывает у него больший интерес к лечению.
+
+        </li>
+        <li>
+          Цветные пломбы Twinky Star отличаются высокой биосовместимостью и выделением ионов фтора в окружающие ткани
+          зуба, что является средством профилактики вторичного кариеса.
+
+        </li>
+        <li>
+          Благодаря своей прочности и хорошей адгезии к зубу Твинки Стар сохраняет свой первоначальный вид вплоть до
+          физиологической смены зубов.
+
+        </li>
+        <li>
+          С Twinky Star легко наладить контакт с маленькими пациентами, что позволяет добиться хороших результатов
+          качества пломбирования и дети больше не боятся стоматолога, а с удовольствием идут к нам на прием, потому что
+          визит к стоматологу становится для ребенка веселой игрой.
+        </li>
+      </ol>
+      <p>Композитные фотополимерные материалы также можно и нужно использовать при восстановлении молочных зубов, но
+        только в том случае, если ребенок позволяет врачу хорошо вычистить больной зуб, спокойно сидит в кресле, пока
+        стоматолог проводит реставрацию.</p>
+    </div>
+    <div class="serv-slider_doctors  uk-block-secondary">
+      <div class="slider-title">
+        <b> Советы</b> наших специалистов
+      </div>
+
+      <div class="swiper slider-blog uk-container uk-container-center">
+        <div class=" swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="top">
+              До какого возраста родители должны помогать чистить зубы детям?
+            </div>
+            <div class="bottom">
+              <div class="text">
+                Учитывая ключевые сценарии поведения, выбранный нами инновационный путь требует анализа системы обучения
+                кадров, соответствующей насущным потребностям. Следует отметить, что социально-экономическое развитие
+                позволяет оценить значение поэтапного и последовательного развития общества! Задача организации, в
+                особенности же постоянный количественный рост и сфера нашей активности не оставляет шанса для
+                существующих
+                финансовых и административных условий.
+
+              </div>
+              <a href="" class="uk-button uk-button-large uk-button-primary button-primary_serveces  call">читать
+                дальше</a>
+
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="top">
+              До какого возраста родители должны помогать чистить зубы детям?
+            </div>
+            <div class="bottom">
+              <div class="text">
+                Учитывая ключевые сценарии поведения, выбранный нами инновационный путь требует анализа системы обучения
+                кадров, соответствующей насущным потребностям. Следует отметить, что социально-экономическое развитие
+                позволяет оценить значение поэтапного и последовательного развития общества! Задача организации, в
+                особенности же постоянный количественный рост и сфера нашей активности не оставляет шанса для
+                существующих
+                финансовых и административных условий.
+
+              </div>
+              <a href="" class="uk-button uk-button-large uk-button-primary button-primary_serveces  call">читать
+                дальше</a>
+
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="top">
+              До какого возраста родители должны помогать чистить зубы детям?
+            </div>
+            <div class="bottom">
+              <div class="text">
+                Учитывая ключевые сценарии поведения, выбранный нами инновационный путь требует анализа системы обучения
+                кадров, соответствующей насущным потребностям. Следует отметить, что социально-экономическое развитие
+                позволяет оценить значение поэтапного и последовательного развития общества! Задача организации, в
+                особенности же постоянный количественный рост и сфера нашей активности не оставляет шанса для
+                существующих
+                финансовых и административных условий.
+
+              </div>
+              <a href="" class="uk-button uk-button-large uk-button-primary button-primary_serveces  call">читать
+                дальше</a>
+
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="top">
+              До какого возраста родители должны помогать чистить зубы детям?
+            </div>
+            <div class="bottom">
+              <div class="text">
+                Учитывая ключевые сценарии поведения, выбранный нами инновационный путь требует анализа системы обучения
+                кадров, соответствующей насущным потребностям. Следует отметить, что социально-экономическое развитие
+                позволяет оценить значение поэтапного и последовательного развития общества! Задача организации, в
+                особенности же постоянный количественный рост и сфера нашей активности не оставляет шанса для
+                существующих
+                финансовых и административных условий.
+
+              </div>
+              <a href="" class="uk-button uk-button-large uk-button-primary button-primary_serveces  call">читать
+                дальше</a>
+
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="slider-button-prev">
+          <img src=" products/arrowleft.png" alt="">
+        </div>
+        <div class="slider-button-next">
+          <img src=" products/arrowright.png" alt="">
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class="uk-container uk-container-center uk-margin-large serv_faq">
+      <div class="subtitle_serv">
+        <b> Часто задаваемые вопросы</b>
+      </div>
+
+      <div class="serv_faq-blog">
+        <div class="left-part">
+          <button class="accordion">Нужно ли чистить молочные зубы? <img src=" products/arrow_down.png"
+              alt=""></button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia veniam necessitatibus modi sapiente,
+              cupiditate dolore tempore repudiandae, totam et soluta porro id! Quis consequatur deserunt velit
+              dignissimos iste veritatis culpa.
+              Culpa est officia sit vitae asperiores doloribus quam, illo nisi dolorem aperiam aliquam, rerum repellat
+              soluta, ut ipsum cupiditate autem earum at alias! Eaque eum harum nihil suscipit. Perferendis, libero!
+              Itaque facere, fugiat maiores quos id quod eaque reiciendis commodi in aperiam, facilis, voluptate minima
+              cumque temporibus ullam? Maiores praesentium alias dolorum, similique suscipit illum delectus a deserunt
+              iusto veritatis.</p>
+          </div>
+          <button class="accordion">Нужно ли чистить молочные зубы? <img src=" products/arrow_down.png"
+              alt=""></button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia veniam necessitatibus modi sapiente,
+              cupiditate dolore tempore repudiandae, totam et soluta porro id! Quis consequatur deserunt velit
+              dignissimos iste veritatis culpa.
+              Culpa est officia sit vitae asperiores doloribus quam, illo nisi dolorem aperiam aliquam, rerum repellat
+              soluta, ut ipsum cupiditate autem earum at alias! Eaque eum harum nihil suscipit. Perferendis, libero!
+              Itaque facere, fugiat maiores quos id quod eaque reiciendis commodi in aperiam, facilis, voluptate minima
+              cumque temporibus ullam? Maiores praesentium alias dolorum, similique suscipit illum delectus a deserunt
+              iusto veritatis.</p>
+          </div>
+          <button class="accordion">Нужно ли чистить молочные зубы? <img src=" products/arrow_down.png"
+              alt=""></button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia veniam necessitatibus modi sapiente,
+              cupiditate dolore tempore repudiandae, totam et soluta porro id! Quis consequatur deserunt velit
+              dignissimos iste veritatis culpa.
+              Culpa est officia sit vitae asperiores doloribus quam, illo nisi dolorem aperiam aliquam, rerum repellat
+              soluta, ut ipsum cupiditate autem earum at alias! Eaque eum harum nihil suscipit. Perferendis, libero!
+              Itaque facere, fugiat maiores quos id quod eaque reiciendis commodi in aperiam, facilis, voluptate minima
+              cumque temporibus ullam? Maiores praesentium alias dolorum, similique suscipit illum delectus a deserunt
+              iusto veritatis.</p>
+          </div>
+          <button class="accordion">Нужно ли чистить молочные зубы? <img src=" products/arrow_down.png"
+              alt=""></button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia veniam necessitatibus modi sapiente,
+              cupiditate dolore tempore repudiandae, totam et soluta porro id! Quis consequatur deserunt velit
+              dignissimos iste veritatis culpa.
+              Culpa est officia sit vitae asperiores doloribus quam, illo nisi dolorem aperiam aliquam, rerum repellat
+              soluta, ut ipsum cupiditate autem earum at alias! Eaque eum harum nihil suscipit. Perferendis, libero!
+              Itaque facere, fugiat maiores quos id quod eaque reiciendis commodi in aperiam, facilis, voluptate minima
+              cumque temporibus ullam? Maiores praesentium alias dolorum, similique suscipit illum delectus a deserunt
+              iusto veritatis.</p>
+          </div>
+
+
+        </div>
+        <div class="right-part">
+
+          <button class="accordion_second">Нужно ли чистить молочные зубы? <img src=" products/arrow_down.png"
+              alt=""></button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia veniam necessitatibus modi sapiente,
+              cupiditate dolore tempore repudiandae, totam et soluta porro id! Quis consequatur deserunt velit
+              dignissimos iste veritatis culpa.
+              Culpa est officia sit vitae asperiores doloribus quam, illo nisi dolorem aperiam aliquam, rerum repellat
+              soluta, ut ipsum cupiditate autem earum at alias! Eaque eum harum nihil suscipit. Perferendis, libero!
+              Itaque facere, fugiat maiores quos id quod eaque reiciendis commodi in aperiam, facilis, voluptate minima
+              cumque temporibus ullam? Maiores praesentium alias dolorum, similique suscipit illum delectus a deserunt
+              iusto veritatis.</p>
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="uk-block uk-block-secondary uk-text-center">
+      <div class="uk-container uk-container-center">
+        <ul class="uk-list uk-flex uk-flex-space-around uk-flex-wrap">
+          <li class="innerDiv uk-overlay uk-overlay-hover">
+            <a href="./dental-services/diagnostics/">
+              <div class="firstImg uk-overlay-scale uk-cover-background"></div>
+            </a>
+            <span class="span">Диагностика</span>
+          </li>
+          <li class="innerDiv uk-overlay uk-overlay-hover">
+            <a href="./dental-services/digital-smile-design/">
+              <div class="secondImg uk-overlay-scale uk-cover-background"></div>
+            </a>
+            <span class="span">Цифровое моделирование улыбки</span>
+          </li>
+          <li class="innerDiv uk-overlay uk-overlay-hover">
+            <a href="./dental-services/vosstanovlenie-razrushenih-zubov/">
+              <div class="thirdImg uk-overlay-scale uk-cover-background"></div>
+            </a>
+            <span class="span">Лечение и реставрация зубов</span>
+          </li>
+          <li class="innerDiv uk-overlay uk-overlay-hover">
+            <a href="./dental-services/teeth-whitening/">
+              <div class="fourthImg uk-overlay-scale uk-cover-background"></div>
+            </a>
+            <span class="span">Отбеливание зубов</span>
+          </li>
+          <li class="innerDiv uk-overlay uk-overlay-hover">
+            <a href="./dental-services/wisdom-tooth-extraction/">
+              <div class="fifthImg uk-overlay-scale uk-cover-background"></div>
+            </a>
+            <span class="span">Удаление зубов мудрости</span>
+          </li>
+          <li class="innerDiv uk-overlay uk-overlay-hover">
+            <a href="./dental-services/implantacia-zubov/">
+              <div class="sixthImg uk-overlay-scale uk-cover-background"></div>
+            </a>
+            <span class="span">Имплантация</span>
+          </li>
+          <li class="innerDiv uk-overlay uk-overlay-hover">
+            <a href="./dental-services/ispravlenie-prikusa-bez-breketov/">
+              <div class="seventhImg uk-overlay-scale uk-cover-background"></div>
+            </a>
+            <span class="span">Исправление прикуса</span>
+          </li>
+          <li class="innerDiv uk-overlay uk-overlay-hover">
+            <a href="./dental-services/dental-veneers/">
+              <div class="eightImg uk-overlay-scale uk-cover-background"></div>
+            </a>
+            <span class="span">Виниры и коронки</span>
+          </li>
+          <li class="innerDiv uk-overlay uk-overlay-hover">
+            <a href="./dental-services/pediatric-dentistry/">
+              <div class="ninthImg uk-overlay-scale uk-cover-background"></div>
+            </a>
+            <span class="span">Детская стоматология</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="uk-block uk-block-primary uk-contrast uk-text-center" style="padding:1em;">
+      <div itemscope itemtype="http://schema.org/LocalBusiness">
+        <p><img itemprop="image" src="/assets/logo_web_tablet.png" alt="Логотип Клиника доктора Лапченко"></p>
+        <p><span itemprop="name">ООО «Стоматологическая клиника доктора Лапченко»</span> <b>&copy;&nbsp;</b>2000-<span
+            class="currentYear"></span></p>
+        <p><span itemprop="telephone" content="tel:+380992597081"></span>
+          <span itemprop="priceRange" content="80грн - 35000грн"></span>
+        </p>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <p><span itemprop="addressCountry">Украина</span>, <span itemprop="addressLocality">Днепр</span>, <span
+              itemprop="streetAddress">ул. Обручева 3</span></p>
+          <a href="tel:+380675232181" itemprop="telephone" class="phonecall"
+            onclick="ga('send','event','button','call'); ym('71324331', 'reachGoal', 'phone_click'); return true;">+38(067)523-21-81</a>
+          <a href="tel:+380992597081" itemprop="telephone" class="phonecall"
+            onclick="ga('send','event','button','call'); ym('71324331', 'reachGoal', 'phone_click'); return true;">+38(099)259-70-81</a>
+          <a itemprop="email" href="mailto:info@lapchenko.clinic" class="emailsend"
+            onclick="ga('send','event','button','email');">info@lapchenko.clinic</a>
+          <data itemprop="openingHours" value="Mo-Sa 09:00-20:00"></data>
+        </div>
+      </div>
+    </div>
+    <a href="#" data-uk-smooth-scroll><i class="uk-icon-arrow-circle-up"></i></a>
+    <div class="uk-hidden-notouch uk-visible-small">
+      <div style="height:55px;"></div>
+      <div style="height:55px; position:fixed; width:100%; bottom:0; background-color: white; font-size:0;">
+        <a style="width:46%; margin:8px 2%; padding:6px;" href="#phone-modal" data-uk-modal="{center:true}"
+          class="uk-text-large uk-button uk-button-primary uk-border-corner"><i
+            class="uk-icon-small uk-icon-phone"></i>  Позвонить</a>
+        <a style="width:46%; margin:8px 2%; padding:6px;" href="./contact-us/#map"
+          class="uk-text-large uk-button uk-button-primary uk-border-corner bg-blue"><i
+            class="uk-icon-small uk-icon-map-marker"></i>  Наш адрес</a>
+      </div>
+      <div id="phone-modal" class="uk-modal">
+        <div class="uk-modal-dialog uk-text-center" style="max-width:95%;">
+          <a class="uk-button-large uk-button uk-button-primary phonecall" style="margin:7px 3px;"
+            href="tel:+380675232181"
+            onclick="ga('send','event','button','call'); ym('71324331', 'reachGoal', 'phone_click'); return true;">Киевстар<br>(067)
+            523-21-81</a>
+          <a class="uk-button-large uk-button uk-button-primary phonecall" style="margin:7px 3px;"
+            href="tel:+380992597081"
+            onclick="ga('send','event','button','call'); ym('71324331', 'reachGoal', 'phone_click'); return true;">Vodafone<br>(099)
+            259-70-81</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+  <template>
+    <div data-jquery-fix>
+      <div id="modalform" class="uk-modal">
+        <div class="uk-modal-dialog uk-border-rounded bg-sky">
+          <a class="uk-modal-close uk-close"></a>
+          <h2 class="uk-modal-header uk-margin-bottom blue"></h2>
+          <form class="uk-form bg-no" style="width:100%;padding:20px;margin-left:-20px;"
+            onsubmit="ga('send','event','all_form','sent'); ym('71324331', 'reachGoal', 'form_sent'); return true;">
+            <img class="uk-float-right uk-margin" src="">
+            <p class="uk-text-medium violet"></p>
+            <input type="text" name="from" required>
+            <p class="uk-text-medium violet"></p>
+            <textarea rows="3" name="message" required></textarea>
+            <input type="submit" class="uk-hidden">
+            <input type="reset" class="uk-hidden">
+          </form>
+          <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button"></button>
+            <button class="uk-button uk-button-primary"
+              onclick="ga('send','event','all_form','sent'); ym('71324331', 'reachGoal', 'button_zapis'); return true;"></button>
+          </div>
+          <iframe id="targetif" name="targetif" class="uk-hidden"></iframe>
+        </div>
+      </div>
+    </div>
+  </template>
+  <div id="chief_ua" class="uk-modal">
+    <div class="uk-modal-dialog">
+      <a class="uk-modal-close uk-close"></a>
+      <h2 class="margintop">Лапченко Жанна Васильевна</h2>
+      <img class="uk-float-left uk-margin-right" src="/photos/dentists/Dr-Zhanna-Lapchenko.jpg" width="200" height=""
+        alt="Доктор Лапченко Жанна Василівна">
+      <div class="innerText" style="font-size: 1.2rem;">
+        <p>Стоматологічна практика з 1982 року</p>
+        <p>Працює в Клініці доктора Лапченко з 2000 року</p>
+        <p>Основні спеціалізації: терапевтична, ортопедична та хірургічна стоматологія</p>
+        <p>Головний лікар Клініки Доктора Лапченко. Член асоціації імплантологів України, глава обласного осередку
+          Асоціації приватно практикуючих стоматологів України, член Асоціації пародонтологів України та Асоціації
+          лазерної стоматології України.</p>
+        <p>Безперервна постдипломна освіта. У 2000 постдипломна освіта у Швейцарії. 2005 - 2012 неодноразове навчання
+          стоматологічній імплантації та протезування на імплантатах в Німеччині. Вивчення планування ортопедичного
+          лікування в естетичних зонах у Г. Дажаєва, К. Кочмана, М. Фрадеані, П. Маньє, Д. Массіроні і ін. Ініцальная
+          шинотерапія у М. Сойхера. Пройшла курс діагностики захворювань суглоба нижньої щелепи у М. Антонiка. Постійно
+          продовжує підвищення власної кваліфікації та самостійно навчає лікарів Клініки доктора Лапченко і молодих
+          фахівців в Україні.</p>
+      </div>
+    </div>
+  </div>
+  <div id="chief_ru" class="uk-modal">
+    <div class="uk-modal-dialog">
+      <a class="uk-modal-close uk-close"></a>
+      <h2 class="margintop">Лапченко Жанна Васильевна</h2>
+      <img class="uk-float-left uk-margin-right" src="/photos/dentists/Dr-Zhanna-Lapchenko.jpg" width="200" height=""
+        alt="Доктор Лапченко Жанна Васильевна">
+      <div class="innerText" style="font-size: 1.2rem;">
+        <p>Стоматологическая практика с 1982 года</p>
+        <p>Работает в Клинике доктора Лапченко с 2000 года</p>
+        <p>Основные специализации: терапевтическая, ортопедическая и хирургическая стоматология</p>
+        <p>Главный врач Клиники Доктора Лапченко. Член ассоциации имплантологов Украины, глава областной ячейки
+          Ассоциации частнопрактикующих стоматологов Украины, член Ассоциации пародонтологов Украины и Ассоциации
+          лазерной стоматологии Украины.</p>
+        <p>Непрерывное постдипломное образование. В 2000 постдипломное образование в Швейцарии. 2005 – 2012
+          неоднократное обучение стоматологической имплантации и протезированию на имплантатах в Германии. Изучение
+          планирования ортопедического лечения в эстетических зонах у Г. Дажаева, К. Кочмана, М. Фрадеани, П. Манье, Д.
+          Массирони и др. Иницальная шинотерапия у М. Сойхера. Прошла курс диагностики заболеваний сустава нижней
+          челюсти у М. Антоника. Постоянно продолжает повышение собственной квалификации и самостоятельно обучает врачей
+          Клиники доктора Лапченко и молодых специалистов в Украине.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.slider-serveces', {
+
+      slidesPerView: 4,
+      spaceBetween: 90,
+      centerInsufficientSlides: true,
+      // loop: true,
+      navigation: {
+        nextEl: '.slider-button-next',
+        prevEl: '.slider-button-prev',
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        475: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        
+        680: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        
+        900: {
+          slidesPerView: 4,
+          spaceBetween: 45
+        }
+      }
+
+
+    });
+    const swiperblog = new Swiper('.slider-blog', {
+
+      slidesPerView: 3,
+      centerInsufficientSlides: true,
+      spaceBetween: 35,
+      loop: true,
+      navigation: {
+        nextEl: '.slider-button-next',
+        prevEl: '.slider-button-prev',
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+       
+        
+        670: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        },
+        
+        670: {
+          slidesPerView: 3,
+          spaceBetween: 35
+        }
+      }
+
+    });
+
+    let acc = document.getElementsByClassName("accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+
+        this.classList.toggle("active");
+
+
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    let acc2 = document.getElementsByClassName("accordion_second");
+    // let i;
+
+    for (i = 0; i < acc2.length; i++) {
+      acc2[i].addEventListener("click", function () {
+
+        this.classList.toggle("active");
+
+
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/js/components/lightbox.min.js"></script>
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/js/components/tooltip.min.js"></script>
 </body>
 
 </html>
