@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/css/uikit.min.css" as="style"
     onload="this.rel='stylesheet'" media="all">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/css/components/tooltip.almost-flat.min.css" rel="stylesheet"> -->
   <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/css/components/tooltip.almost-flat.min.css"
     as="style" onload="this.rel='stylesheet'" media="all">
@@ -289,8 +291,8 @@
 
 
   <main>
-    <div class="uk-container uk-container-center uk-margin-large">
-      <article>
+    <div class="uk-container uk-container-center uk-margin-large serv_seo-block">
+  
         <ul class="uk-breadcrumb breadcrumb_serv" itemscope itemtype="http://schema.org/BreadcrumbList">
           <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <a itemprop="item" href="./index">
@@ -309,10 +311,13 @@
           </li>
         </ul>
         <hgroup>
-          <p class="title_serv">Детская стоматология в Днепре</p>
+          <div class="title_serv">Детская стоматология в Днепре</div>
 
         </hgroup>
-        <p class="subtitle_serv"><b>С какого возраста</b> можно лечить молочные зубы?</p>
+        
+        <div class="subtitle_serv">
+          Лечение постоянных и молочных зубов
+        </div>
         <p>
           Когда ребенок не боится стоматолога – это не везение и не удача. Это результат тщательно спланированных
           действий мамы и папы. Как только у малыша появились зубки – их нужно начинать чистить. Да, даже если они
@@ -333,8 +338,9 @@
           Приходите к нам, и мы научим ваших деток чистить зубы правильно, а вас - как проверить результат!
         </p>
 
-      </article>
+      
       <div class="serv_price">
+        
         <div class="subtitle_serv">
           <b> Цены на лечение </b> молочных зубов
         </div>
@@ -354,19 +360,19 @@
                 </tr>
               </thead>
               <tr itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                <td itemprop="name"><b>Веселый прием</b> - психологическая адаптация ребенка</td>
+                <td itemprop="name"><span class="black_txt">Веселый прием</span> - психологическая адаптация ребенка</td>
                 <td class="price_value">от <span itemprop="price">4600</span> грн
                   <meta itemprop="priceCurrency" content="UAH">
                 </td>
               </tr>
               <tr itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                <td itemprop="name"><b> Веселые пломбы </b>- пломбировка цветными фотополимерными материалами</td>
+                <td itemprop="name"><span class="black_txt"> Веселые пломбы </span>- пломбировка цветными фотополимерными материалами</td>
                 <td class="price_value">от <span itemprop="price">11400</span> грн
                   <meta itemprop="priceCurrency" content="UAH">
                 </td>
               </tr>
               <tr itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                <td itemprop="name"><b>Лечение каналов молочных зубов</b></td>
+                <td itemprop="name"><span class="black_txt">Лечение каналов молочных зубов</span></td>
                 <td class="price_value">от <span itemprop="price">12250</span> грн
                   <meta itemprop="priceCurrency" content="UAH">
                 </td>
@@ -383,7 +389,7 @@
           <div class="schedule_card">
             <img src="products/clock.svg" alt="">
             <div class="card_info">
-              <div class="top">По бдуням
+              <div class="top">По будням
               </div>
               <div class="bottom">
                 09:00 - 20:00
@@ -540,9 +546,8 @@
 
     </div>
     <div class="uk-container uk-container-center uk-margin-large serv_seo-text">
-      <div class="subtitle_serv">
-        Лечение постоянных и молочных зубов
-      </div>
+      <div class="subtitle_serv"><b>С какого возраста</b> можно лечить молочные зубы?</div>
+      
       <p>
         Найти лучшую стоматологическую клинику в Днепре для многих является многолетним вопросом выбора… Не секрет, что
         посещение стоматолога до сих пор остается одной из самых распространенных фобий не только для детей, но и их
@@ -695,20 +700,24 @@
       <div class="serv_galery">
         <div class="serv_col">
           <div class="big_img">
-            <img src=" products/galery1.png" alt="">
+            <a href="products/galery1.png" data-lightbox="image" data-title=""><img src=" products/galery1.png" alt=""></a>
+            
           </div>
           <div class="small_img">
-            <img src=" products/galery2.png" alt="">
+            <a href="products/galery2.png" data-lightbox="image" data-title=""><img src=" products/galery2.png" alt=""></a>
+            
           </div>
         </div>
 
         <div class="serv_col">
 
           <div class="small_img">
-            <img src=" products/galery2.png" alt="">
+            <a href="products/galery2.png" data-lightbox="image" data-title=""><img src=" products/galery2.png" alt=""></a>
+            
           </div>
           <div class="big_img">
-            <img src=" products/galery1.png" alt="">
+            <a href="products/galery1.png" data-lightbox="image" data-title=""><img src=" products/galery1.png" alt=""></a>
+            
           </div>
         </div>
       </div>
@@ -1086,13 +1095,17 @@
     <a href="#" data-uk-smooth-scroll><i class="uk-icon-arrow-circle-up"></i></a>
     <div class="uk-hidden-notouch uk-visible-small">
       <div style="height:55px;"></div>
-      <div style="height:55px; position:fixed; width:100%; bottom:0; background-color: white; font-size:0;">
+      <div style="text-transform: uppercase; z-index: 1; height:70px; position:fixed; width:100%; bottom:0; background-color: white; font-size:0;">
         <a style="width:46%; margin:8px 2%; padding:6px;" href="#phone-modal" data-uk-modal="{center:true}"
-          class="uk-text-large uk-button uk-button-primary uk-border-corner"><i
-            class="uk-icon-small uk-icon-phone"></i>  Позвонить</a>
-        <a style="width:46%; margin:8px 2%; padding:6px;" href="./contact-us/#map"
-          class="uk-text-large uk-button uk-button-primary uk-border-corner bg-blue"><i
-            class="uk-icon-small uk-icon-map-marker"></i>  Наш адрес</a>
+          class="uk-text-large uk-button uk-button-primary uk-border-corner">
+          <!-- <i class="uk-icon-small uk-icon-phone"></i>  -->
+          позвоните
+          <br> нам</a>
+        <a style="width:46%; margin:8px 2%; padding:6px;" href="tel:+380675232181"
+          class="uk-text-large uk-button uk-button-primary uk-border-corner bg-blue">
+          <!-- <i
+            class="uk-icon-small uk-icon-map-marker"></i>  -->
+             записаться <br> на прием</a>
       </div>
       <div id="phone-modal" class="uk-modal">
         <div class="uk-modal-dialog uk-text-center" style="max-width:95%;">
@@ -1288,7 +1301,9 @@
       });
     }
   </script>
-  <script defer src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/js/components/lightbox.min.js"></script>
+  <!-- проверить версию лайтшот -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script defer src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/js/components/lightbox.min.js"></script> -->
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/js/components/tooltip.min.js"></script>
 </body>
 
